@@ -1,4 +1,6 @@
 cd ~/web
+mv ~/web/etc/hello.py /home/box/etc/ 
+sudo ln -s /home/box/etc/hello.py /etc/gunicorn.d/hello.py
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/default
-sudo gunicorn -c /home/box/web/etc/hello.py hello:app &
+sudo service gunicorn restart
 sudo /etc/init.d/nginx start
