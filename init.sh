@@ -1,4 +1,3 @@
-sudo apt update
 sudo pip install --upgrade django
 sudo pip install --upgrade gunicorn
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/default
